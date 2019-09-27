@@ -59,10 +59,11 @@ class FirstPage extends StatelessWidget {
                 MaterialButton(
                   child: Text("Second Page"),
                   onPressed: () {
-                    Navigator.of(context).push(
+                    Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
                         builder: (context) => SecondPage(),
                       ),
+                      (Route<dynamic> route) => false,
                     );
                   },
                 )
