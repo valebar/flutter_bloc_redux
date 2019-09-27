@@ -21,6 +21,7 @@ dependencies:
   built_value: ^6.7.0
   redux: 3.0.0
   flutter_redux: 0.5.3
+  redux_logging: 0.3.0
   bloc: 0.15.0
   flutter_bloc: 0.21.0
   flutter:
