@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_redux/bloc/bloc.dart';
 import 'package:flutter_bloc_redux/bloc/counter_bloc.dart';
+import 'package:flutter_bloc_redux/pages/first_page.dart';
 import 'package:flutter_bloc_redux/redux/app/app_state.dart';
 import 'package:flutter_bloc_redux/viewmodels/page_view_model.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -55,6 +56,17 @@ class SecondPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  MaterialButton(
+                  child: Text("First Page"),
+                  onPressed: () {
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(
+                        builder: (context) => FirstPage(),
+                      ),
+                      (Route<dynamic> route) => false,
+                    );
+                  },
+                )
                 ],
               ),
             ),
